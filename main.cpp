@@ -7,25 +7,25 @@
 using namespace std;
 
 int main() {
-    int lbs = 0;
-    cout << "Enter a number in pounds: " << endl;
-    cin >> lbs;
-    double kilograms = lbs * 0.454;
-    cout << "The number of pounds entered is " << kilograms << " kilograms." << endl;
-    return 0;
-}
+//    int lbs = 0;
+//    cout << "Enter a number in pounds: " << endl;
+//    cin >> lbs;
+//    double kilograms = lbs * 0.454;
+//    cout << "The number of pounds entered is " << kilograms << " kilograms." << endl;
+//    return 0;
+//}
 //
 //
 //{
-//    int side = 0;
-//    cout << "Enter the value of the side of a hexagon: " << endl;
-//    cin >> side;
-//
-//    double area = (side*side)*((3)*sqrt(3))/(2);
-//
-//    cout << "The area is " << area;
-//    return 0;
-//}
+    int side = 0;
+    cout << "Enter the value of the side of a hexagon: " << endl;
+    cin >> side;
+
+    double area = (side*side)*((3)*sqrt(3))/(2);
+
+    cout << "The area is " << area;
+    return 0;
+}
 //int main()
 //{
 //    int num1, num2;
