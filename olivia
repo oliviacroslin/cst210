@@ -1,0 +1,21 @@
+// Kilometers to Miles Program
+// By Olivia Croslin
+// January 28, 2019
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    //define variables
+    double kilometers = 5,
+        miles;
+
+    //convert to miles
+    miles = kilometers * 0.62137;
+
+    //output
+    cout<<"Starting kilometers: " <<kilometers
+        <<"\nMiles: " <<miles<<endl;
+    return 0;
+}
