@@ -51,28 +51,51 @@ int main() {
 //        i ++;
 //        cout << num << endl;
 //    }
-    char phrase[30];
-    int i, length;
-    int flag = 0;
+//    char phrase[30];
+//    int i, length;
+//    int flag = 0;
+//
+//    cout << "Enter a word to see if is a palindrome: "; cin >> phrase;
+//
+//    length = strlen(phrase);
+//
+//    for(i=0; i < length; i++){
+//        if(phrase[i] != phrase[length-i-1]){
+//            flag = 1;
+//            break;
+//        }
+//    }
+//    if (flag) {
+//        cout << phrase << " is not a palindrome." << endl;
+//    }
+//    else {
+//        cout << phrase << " is a palindrome." << endl;
+//    }
+//    return 0;
+//}
+7
+    int n, i;
+        bool prime = true;
 
-    cout << "Enter a word to see if is a palindrome: "; cin >> phrase;
+        cout << "Enter a positive integer: ";
+        cin >> n;
 
-    length = strlen(phrase);
-
-    for(i=0; i < length; i++){
-        if(phrase[i] != phrase[length-i-1]){
-            flag = 1;
-            break;
+        for(i = 2; i <= n / 2; ++i)
+        {
+            if(n % i == 0)
+            {
+                prime = false;
+                break;
+            }
         }
-    }
-    if (flag) {
-        cout << phrase << " is not a palindrome." << endl;
-    }
-    else {
-        cout << phrase << " is a palindrome." << endl;
-    }
-    return 0;
+        if (prime)
+            cout << "This is a prime number";
+        else
+            cout << "This is not a prime number";
 
-}
+        return 0;
+    }
+
+
 
 
