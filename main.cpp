@@ -1,44 +1,78 @@
-// By Olivia Croslin
+// Olivia Croslin
 // This is my own work
 
 #include <iostream>
-#include <cmath>
+#include <string.h>
 
 using namespace std;
 
-//int main() {
-//    int lbs = 0;
-//    cout << "Enter a number in pounds: " << endl;
-//    cin >> lbs;
-//    double kilograms = lbs * 0.454;
-//    cout << "The number of pounds entered is " << kilograms << " kilograms." << endl;
+int main() {
+//    int a,b,c,d,e;
+//
+//    cout << "Enter 5 integers: ";
+//    cin >> a >> b >> c >> d >> e;
+//    cout << "The numbers are " << a << " " << b << " " << c << " " << d << " " << e  << endl;
+//
+//    int max = a;
+//    if (b > max) max = b;
+//    if (c > max) max = c;
+//    if (d > max) max = d;
+//    if (e > max) max = e;
+//
+//    cout << "The max value is " << max << endl;
+//
+//    int min = e;
+//    if (a < min) min = a;
+//    if (b < min) min = b;
+//    if (c < min) min = c;
+//    if (d < min) min = d;
+//
+//    cout << "The min value is " << min << endl;
+//
 //    return 0;
 //}
+//    int sum = 0;
 //
-//
-//{
-//    int side = 0;
-//    cout << "Enter the value of the side of a hexagon: " << endl;
-//    cin >> side;
-//
-//    double area = (side*side)*((3)*sqrt(3))/(2);
-//
-//    cout << "The area is " << area;
-//    return 0;
-//}
-int main()
-{
-    int num1, num2;
-    cout << "Enter an integer value: ";
-    cin >> num1;
-    cout << "Enter another integer value: ";
-    cin >> num2;
+//    int i = 1;
+//    while (i <= 50)
+//    {
+//        sum = sum + i * 7;
+//        i++;
+//    }
+//    cout << sum << endl;
 
-    if(num1>num2) {
-        cout << num1 << " is larger than " << num2;
+//    int num = 1;
+//
+//    int i = 1;
+//    while (i <= 10)
+//    {
+//        num = num * i;
+//
+//        i ++;
+//        cout << num << endl;
+//    }
+    char phrase[30];
+    int i, length;
+    int flag = 0;
+
+    cout << "Enter a word to see if is a palindrome: "; cin >> phrase;
+
+    length = strlen(phrase);
+
+    for(i=0; i < length; i++){
+        if(phrase[i] != phrase[length-i-1]){
+            flag = 1;
+            break;
+        }
+    }
+    if (flag) {
+        cout << phrase << " is not a palindrome." << endl;
     }
     else {
-        cout << num2 << " is larger than " << num1;
+        cout << phrase << " is a palindrome." << endl;
     }
     return 0;
+
 }
+
+
