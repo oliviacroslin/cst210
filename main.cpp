@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <string.h>
+#include <fstream>
 
 using namespace std;
 
@@ -73,29 +74,81 @@ int main() {
 //    }
 //    return 0;
 //}
-7
-    int n, i;
-        bool prime = true;
 
-        cout << "Enter a positive integer: ";
-        cin >> n;
+//    int n, i;
+//        bool prime = true;
+//
+//        cout << "Enter a positive integer: ";
+//        cin >> n;
+//
+//        for(i = 2; i <= n / 2; ++i)
+//        {
+//            if(n % i == 0)
+//            {
+//                prime = false;
+//                break;
+//            }
+//        }
+//        if (prime)
+//            cout << "This is a prime number";
+//        else
+//            cout << "This is not a prime number";
+//
+//        return 0;
+//    }
 
-        for(i = 2; i <= n / 2; ++i)
-        {
-            if(n % i == 0)
-            {
-                prime = false;
-                break;
-            }
-        }
-        if (prime)
-            cout << "This is a prime number";
-        else
-            cout << "This is not a prime number";
+//    int a, b, c, d, e;
+//
+//    cout << "Enter 5 integers: ";
+//    cin >> a >> b >> c >> d >> e;
+//
+//    int array[5] = {a, b, c, d, e};
+//
+//    double sum = 0;
+//    double average;
+//
+//    for(int i=0; i<5; i++){
+//        sum += array[i];
+//    }
+//    average = sum/5;
+//
+//    cout << "The average is: " << average << endl;
+//    return 0;
+//}
+    int n;
+    string* wordList;
+    cout << "Enter the number of words to process: " << endl;
+    int size;
+    cin >> size;
 
-        return 0;
+    wordList = new string[size];
+
+    ifstream fin("input.n");
+
+    if(!fin){
+        cerr<< "File not found" << endl;
+        exit(1);
     }
+    int i = 0;
+    while (i < size) {
+        fin >> wordList[i];
+        i++;
+    }
+    for (int j = 0; j < size; j++)
+    {
+        cout << wordList[j]<< "  ";
+    }
+    cout << endl;
 
+    int longest = 0;
 
+    for (int i=1; i<size; i++) {
+        if (wordList[i].size() > wordList[longest].size())
+            longest = i;
+    }
+    cout << "The longest word is " << wordList[longest] << endl;
 
-
+    delete[] wordList;
+    
+    return 0;
+}
